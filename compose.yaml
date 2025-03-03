@@ -1,0 +1,25 @@
+services:
+  # frontend
+  icommerceadmin_node:
+    restart: always
+    container_name: icommerceadmin_node
+    build:
+      context: ./docker-config/frontend
+    user: "node"
+    working_dir: /home/node/app
+    environment:
+      NODE_ENV: development
+      NPM_CONFIG_LOGLEVEL: info
+    volumes:
+      - ./frontend/:/home/node/app
+    ports:
+      - "3002:3000"
+    command: ["tail", "-f", "/dev/null"] # keep the container running
+    networks:
+      - default
+      - shared_network
+
+networks:
+  default:
+  shared_network:
+    external: true

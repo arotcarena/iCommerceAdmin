@@ -1,0 +1,794 @@
+/*
+Template Name: Velzon - Admin & Dashboard Template
+Author: Themesbrand
+Website: https://themesbrand.com/
+Contact: support@themesbrand.com
+File: Custom Css File
+*/
+.custom-vector-map {
+    svg {
+        width: 100%;
+        max-height: 100%;
+        path {
+            fill: var(--#{$prefix}light) !important;
+        }
+    }
+}
+
+
+@import "_layouts_custom.scss";
+
+// override default css
+// because a default css exists for #status
+input#status {
+    width: auto;
+    position: static;
+    margin: 0;
+    height: auto;
+}
+
+//customizing bootstrap
+.bg-danger-light {
+    background-color: tint-color($danger, 80%);
+}
+.bg-primary-light {
+    background-color: tint-color($primary, 94%);
+}
+.bg-transparent-hover:hover {
+    background-color: transparent;
+}
+
+//ui
+.info-bubble {
+    position: absolute;
+    top: 10px;
+    left: calc(100% + 15px);
+    background-color: #FFF;
+    box-shadow: 0 0 2px $secondary;
+    font-size: .9em;
+    line-height: 1.6;
+    color: $secondary;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 7px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+.info-bubble.bottom {
+    left: 50%;
+    top: calc(100% - 7px);
+    transform: translateX(-50%);
+}
+.nav-link.active {
+    font-weight: 600;
+}
+
+.with-loading-opacity {
+    transition: opacity .3s;
+}
+.with-loading-opacity.is-loading {
+    opacity: .3;
+}
+.hover-underline:hover {
+    text-decoration: underline;
+}
+.border-bottom-secondary {
+    border-bottom: solid 2px $secondary;
+}
+.border-top-secondary {
+    border-top: solid 2px $secondary;
+}
+.separator {
+    height: 1px;
+    background-color: tint-color($secondary, 80%);
+}
+.hover-border-primary:hover {
+    border: solid 1px $primary;
+}
+
+.select-group-is-invalid {
+    .select-field__control, .input-suggested-box-wrapper {
+        border: solid 1px $danger!important;
+    }
+}
+
+//auth layout
+.company-choice-item {
+    transition: all .3s;
+    border: solid 4px transparent;
+}
+.company-choice-item-title {
+    margin-top: 15px;
+    margin-bottom: -15px;
+    font-weight: 400;
+}
+.company-choice-item:hover .company-choice-item-title {
+    color: $dark;
+    font-weight: 600;
+}
+.company-choice-item-title {
+    font-weight: 600;
+}
+.company-choice-item.selected:hover .company-choice-item-title, .company-choice-item.selected .company-choice-item-title {
+    color: $dark;
+}
+.company-choice-item.disabled {
+    opacity: .3;
+    border: none;
+}
+
+.company-choice-item:hover {
+    background-color: rgba(255, 255, 255, .5);
+}
+.company-change-form .company-choice-item:hover {
+    background-color: rgb(240, 240, 240);
+}
+
+.company-choice-item.selected {
+    background-color: #FFF;
+    border: solid 4px $primary;
+    border-radius: 8px;
+}
+@media only screen and (min-width: 770px) {
+    .company-choice-item {
+        padding: 30px;
+    }
+    .company-choice-item.small {
+        padding: 5px 30px;
+    }
+}
+
+.auth-page-wrapper .auth-one-bg .bg-overlay {
+    background: $gray-200;
+}
+.auth-page-wrapper .auth-one-bg{
+    background-image: url("../../../../images/custom/banner/france-sport-banner.jpg");
+    background-position: center top;
+    background-size: cover;
+
+    .bg-overlay{
+        background: linear-gradient(to right, darken($primary, 40%), darken($primary, 10%));
+        opacity: .7;
+    }
+}
+.auth-logo-wrapper {
+    display: flex;
+    justify-content: center;
+}
+.auth-logo {
+    display: flex;
+    column-gap: 50px;
+    row-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: -15px;
+    padding: 15px 25px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, .7);
+}
+.modal-content .auth-logo {
+    column-gap: 20px;
+}
+
+.position-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn-hover {
+    opacity: .4;
+    transition: opacity .2s;
+}
+.btn-hover:hover {
+    opacity: .8;
+}
+.btn-transparent {
+    background-color: transparent;
+    border: none;
+}
+
+.search-box .search-closer {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: .7;
+}
+
+input:disabled {
+    background-color: $gray-300!important;
+}
+.form-switch.checked .form-check-input:disabled {
+    background-color: tint-color($primary, 40%)!important;
+}
+.flatpickr-input[readonly]:disabled {
+    cursor: default;
+}
+
+.small-card {
+    background-color: #FFF;
+    border: solid 1px $gray-300;
+    border-radius: 5px;
+    padding: 10px;
+}
+.small-card.disabled {
+    border: solid 1px $gray-400;
+    background-color: $gray-300;
+}
+
+.form-check.disabled label {
+    cursor: default;
+}
+
+//super crud
+
+.crud-header-sticky {
+    background-color: #FFF;
+    z-index: 3;
+    position: sticky;
+    top: 70px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to bottom, #FFF 80%, transparent);
+}
+.crud-subheader-sticky {
+    position: sticky;
+    z-index: 1;
+    background: linear-gradient(to bottom, #FFF 80%, transparent);
+    top: 112px;
+    padding: 20px 0;
+}
+.crud-subheader-fixed {
+    position: fixed;
+    z-index: 1;
+    top: 112px;
+    background-color: #FFF;
+}
+.crud-subheader-fixed.second-level {
+    top: 212px;
+}
+.crud-subheader-fixed {
+    thead {
+        width: 100%;
+        tr {
+            width: 100%;
+            th {
+                padding: 12px 9.6px;
+                vertical-align: bottom;
+            }
+        }
+    }
+}
+
+.filters-list {
+    display: flex;
+    column-gap: 10px;
+    row-gap: 7px;
+    flex-wrap: wrap;
+}
+.filter-card {
+    max-width: 170px;
+    flex: none;
+    padding-right: 30px;
+    margin-bottom: 0!important;
+}
+.filter-card .btn {
+    padding-right: 10px;
+}
+.filter-card .card-header {
+    padding-right: 30px;
+}
+.filter-value-wrapper {
+    position: absolute;
+    top: calc(100% + 5px);
+    z-index: 1000;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+}
+.filter-value-card {
+    background-color: #FFF;
+    box-shadow: 0 0 2px $secondary;
+    font-size: .9em;
+    line-height: 1.6;
+    color: $secondary;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 7px;
+    border-radius: 5px;
+}
+
+.tab-container-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab-container {
+    flex: 1 0;
+    overflow-x: hidden;
+    border: solid 1px $light;
+}
+.tab-container .table-responsive {
+    margin-top: 0!important;
+}
+
+.columns-selector {
+    flex: none;
+    width: 25px;
+}
+
+.tab-container-wrapper .table-card {
+    margin: 0;
+    min-height: 40vh;
+}
+
+.tab-body.loading-empty {
+    background-color: $secondary!important;
+}
+
+.columns-selector .columns-selector-opener {
+    padding: 0;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    border-radius: 0;
+    border-left: solid 2px $gray-500;
+    background-color: $light;
+    transition: background-color .3s;
+}
+.columns-selector .columns-selector-opener i {
+    margin: 0 auto;
+}
+.columns-selector .columns-selector-opener:hover {
+    background-color: $gray-300;
+}
+.columns-selector.open {
+    width: 275px;
+    display: flex;
+    align-items: flex-start;
+}
+.columns-selector.open .columns-selector-opener {
+    width: 35px;
+    flex: none;
+}
+.columns-selector.open .list-group {
+    flex: 1 0;
+}
+
+.tab-container .ck-editor__editable {
+    min-height: 100px!important;
+}
+
+.tab-controls {
+    position: sticky;
+    right: 0;
+    transform: translateY(1px);
+    background-color: transparent;
+}
+.tab-controls button {
+    opacity: 0;
+    transition: opacity .3s;
+}
+.tab-controls.open button {
+    opacity: .6;
+}
+.tab-controls.open button.line-alert {
+    opacity: 1;
+}
+
+.tab-controls .line-alert {
+    transition: all .3s;
+}
+
+.tab-create-line .tab-controls.open {
+    pointer-events: none;
+}
+.tab-create-line .tab-controls.open button {
+    pointer-events: all;
+}
+
+.tab-container-wrapper .table-hover > tbody > tr:hover > * {
+    --vz-table-bg-state: none;
+}
+.tab-container-wrapper .table-hover > tbody > tr:hover {
+    background-color: var(--vz-table-hover-bg);
+    padding-right: 100px;
+}
+.tab-container-wrapper .table-hover > tbody > tr.bg-danger-light:hover {
+    background-color: tint-color($danger, 65%);
+}
+.tab-container-wrapper .table-hover > tbody > tr.bg-primary-light:hover {
+    background-color: tint-color($primary, 89%);
+}
+.tab-controls button:hover {
+    opacity: 1;
+}
+.tab-controls button.tab-control-lonely {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+//tab create line
+.tab-create-line {
+    background-color: tint-color($primary, 90%);
+}
+.tab-container-wrapper .table-hover > tbody > tr.tab-create-line:hover {
+    background-color: tint-color($primary, 90%);
+}
+
+//tab footer
+.tab-footer-controls {
+    border-top: none;
+    border-bottom: none;
+}
+.tab-footer-controls td {
+    border-bottom: none;
+}
+
+//suggest-list
+.suggest-list {
+    position: absolute;
+    top: calc(100% + 7px);
+    left: 0;
+    right: 0;
+    z-index: 2;
+    box-shadow: 0 0 2px $secondary;
+    border-radius: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: #FFF;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.suggest-item {
+    padding: 8px 10px;
+    cursor: default;
+}
+.suggest-item:hover, .suggest-item.active {
+    background-color: $light;
+}
+
+//input selected items
+.invisible-input {
+    border: none;
+    flex: 1 0;
+}
+.form-control.disabled .invisible-input {
+    width: 100%;
+    padding: 2px 5px;
+}
+.input-selected-items {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2px 8px;
+    width: 100%;
+}
+.input-suggested, .input-suggested-box-wrapper {
+    border-radius: 5px;
+}
+.input-suggested-box-wrapper {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.input-selected-item {
+    color: var(--vz-white);
+    background-color: var(--vz-primary);
+    font-size: .85em;
+    margin: 2px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+}
+.input-selected-item-label {
+    padding: 3px 3px 3px 6px;
+}
+.input-selected-item-closer {
+    background-color: transparent;
+    border: none;
+    padding: 0 4px;
+    height: 100%;
+}
+.input-selected-item-closer:hover {
+    background-color: $red-200;
+}
+.input-selected-item-closer:hover i {
+    color: $danger;
+    font-weight: 600;
+}
+.input-selected-item-closer i {
+    color: #FFF;
+    display: block;
+}
+
+.input-suggested input {
+    cursor: default;
+}
+.input-suggested input:focus {
+    cursor: text;
+}
+.input-icons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: auto;
+    flex: none;
+    align-self: stretch;
+    padding: 5px 0;
+}
+.input-icons-separator-wrapper {
+    height: 100%;
+    padding: 2px 0;
+}
+.input-icons button {
+    transition: opacity .3s;
+}
+.input-icons button, .input-icons-separator {
+    opacity: .5;
+}
+.input-suggested.active .input-icons button, .input-icons button:hover {
+    opacity: 1;
+}
+.form-control.disabled .input-icons button {
+    opacity: .5
+}
+
+.input-icons .btn {
+    padding: 0;
+    cursor: default;
+}
+.input-icons i {
+    color: $secondary;
+}
+
+.input-icons-separator {
+    height: 100%;
+    width: 1px;
+    background-color: $secondary;
+}
+
+.input-suggested-box-wrapper:hover {
+    border: solid 1px $primary;
+}
+.input-suggested.disabled .input-suggested-box-wrapper {
+    border: solid 1px $gray-400;
+}
+.input-suggested.disabled:hover {
+    border: none;
+}
+.input-suggested.active {
+    border: solid 1px $cyan;
+}
+.input-suggested.active .input-suggested-box-wrapper:hover {
+    outline: solid 2px $cyan;
+}
+
+.input-suggested.disabled .input-selected-item {
+    background-color: $gray-300;
+    color: $dark;
+}
+.input-suggested .invisible-input {
+    width: 100%;
+}
+
+.large-select-wrapper > div {
+    min-width: 150px;
+}
+
+//crud-tab cols inputs
+.tab-col-dual-inputs {
+    display: flex;
+    gap: 5px;
+    min-width: 130px;
+}
+
+//tab cell upload
+.tab-cell-upload-field {
+    width: 250px;
+}
+
+.table-nowrap td.cell-type-img {
+    white-space: wrap;
+}
+
+//tab cell html and textarea
+
+.tab-container-wrapper .ug-html, .tab-container-wrapper .html-editor-wrapper, .tab-container-wrapper td.type-textarea {
+    overflow: auto;
+}
+.tab-container-wrapper td.type-textarea {
+    white-space: normal;
+}
+.tab-container-wrapper th.type-html, .tab-container-wrapper td.type-html, .tab-container-wrapper th.type-textarea, .tab-container-wrapper td.type-textarea {
+    max-width: 300px;
+}
+.tab-container-wrapper th.type-number, .tab-container-wrapper td.type-number {
+    max-width: 160px;
+}
+
+.form-check.form-switch {
+    align-items: center;
+    display: flex;
+    gap: 6px;
+}
+.form-check.form-switch .form-label {
+    margin-bottom: 0;
+    order: 1;
+}
+
+//table error
+tr.table-fallback {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-top: none;
+    transform: translate(-50%, -50%);
+}
+
+
+
+//small upload field
+.upload-field-small {
+    overflow: hidden;
+}
+.upload-field-small .dropzone {
+    min-height: auto;
+}
+.upload-field-small .dropzone .dz-message {
+    margin: 0;
+}
+.upload-field-small .dropzone .dz-message h4 {
+    display: none;
+}
+.upload-field-small .dropzone .mb-3 {
+    margin-bottom: 0!important;
+}
+
+@media only screen and (max-width: 500px) {
+    .dropzone.dz-clickable {
+        min-height: auto;
+    }
+    .dropzone .dz-message {
+        margin: 0;
+    }
+    .dropzone .dz-message h4 {
+        display: none;
+    }
+    .dropzone .mb-3 {
+        margin-bottom: 0!important;
+    }
+}
+
+//dropzone disabled
+.disabled > .dropzone {
+    background-color: $gray-300;
+}
+.disabled > .dropzone .dz-message {
+    opacity: .3;
+}
+
+//html field disabled
+.html-editor-wrapper.disabled .ck.ck-editor__main > .ck-editor__editable {
+    background-color: $gray-300!important;
+}
+.html-editor-wrapper .ck.ck-toolbar {
+    background-color: $gray-300 !important;
+    border: solid 2px $gray-300 !important;
+}
+
+//bool field disabled
+.form-switch .form-check-input[disabled] {
+    background-color: #FFF;
+    border: solid 1px $gray-400;
+    opacity: 1;
+}
+
+.form-switch.checked .form-check-input[disabled] {
+    background-color: $gray-400;
+    border: none;
+}
+
+
+//drag'n'drop
+.import-button {
+    transition: all .3s;
+}
+.import-button.dragging {
+    transform: scale(1.2);
+    opacity: .7;
+}
+
+//form submit group sticky
+.form-submit-group {
+    z-index: 1;
+    margin-top: 40px;
+    margin-bottom: 10px; 
+    position: sticky; 
+    bottom: 0;
+    padding: 40px 10px 20px;
+    background-color: #FFF; 
+    margin: -20px -10px 0;
+    background: linear-gradient(to top, #FFF 70%, transparent);
+}
+.form-submit-group-wrapper {
+    position: sticky;
+    bottom: 0;
+}
+.form-submit-group-top {
+    z-index: 2;
+    margin-bottom: -30px;
+    bottom: 60px;
+}
+//subCrud form group must be over superCrud form group
+.super-crud-layout .super-crud-layout .form-submit-group {
+    margin: -20px -10px 0;
+    bottom: 70px;
+}
+
+//column date filter
+.date-picker-filter-wrapper .form-control {
+    display: none;
+}
+
+//select z-index
+.select-zindex-group [class$="-menu"], .select-zindex-group .suggest-list {
+    z-index: 1000!important;
+}
+
+//force select multiple white color
+.select-zindex-group [class$="-multiValue"] * {
+    color: #FFF!important;
+}
+
+//orderItems
+.orderItems-totals-bubble {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 1000px;
+    border: solid 2px $light;
+    background-color: #FFF;
+    height: 40px;
+    padding: 0 15px;
+}
+.orderItems-totals-bubble.light {
+    background-color: transparent;
+    border: solid 1px $secondary;
+    height: 27px;
+    padding: 0 8px;
+}
+
+//complaint orderItem
+.tab-line-expanded {
+    font-size: .9em;
+    height: 105px;
+    td {
+        padding-bottom: 45px;
+    }
+    td:last-child {
+        padding-bottom: .75rem;
+    }
+    .sub-line {
+        position: absolute;
+        left: 9px;
+        bottom: 10px;
+        white-space: nowrap;
+        .sub-line-bubble {
+            background-color: tint-color($primary, 90%);
+            padding: 2px 10px;
+            border-radius: 1000px;
+        }
+        .sub-line-bubble.secondary {
+            background-color: tint-color($secondary, 90%);
+        }
+    }
+}

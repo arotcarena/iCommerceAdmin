@@ -1,0 +1,16 @@
+{
+    "@context": "\/api\/contexts\/User",
+    "@id": "\/api\/users\/202",
+    "@type": "User",
+    "id": 202,
+    "email": "test@email.fr",
+    "roles": [
+        "ROLE_SUPER_ADMIN",
+        "ROLE_USER"
+    ],
+    "civility": "enum.civility.mrs",
+    "firstName": "Virgie VonRueden",
+    "lastName": "Maximilian Blick Jr.",
+    "jobTitle": "Developper",
+    "emailSignature": "\u003Cp\u003EDistinctio totam et eos libero corporis officiis vitae. Molestiae inventore dolorem non sint ea. Tempora deserunt tempora laboriosam in numquam quo. Totam illo et et asperiores necessitatibus.\u003C\/p\u003E\u003Cp\u003EQuia ipsam sunt minima dolorem aut. Recusandae non beatae ullam iusto facere. Quibusdam quia cupiditate rerum officiis voluptatem corporis. Exercitationem quia distinctio dignissimos architecto eum.\u003C\/p\u003E"
+}

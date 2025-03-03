@@ -1,0 +1,11 @@
+{
+    "id": "202",
+    "email": "test@email.fr",
+    "firstName": "Virgie VonRueden",
+    "lastName": "Maximilian Blick Jr.",
+    "avatarFileName": null,
+    "roles": [
+        "ROLE_SUPER_ADMIN",
+        "ROLE_USER"
+    ]
+}

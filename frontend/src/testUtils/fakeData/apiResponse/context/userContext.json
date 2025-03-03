@@ -1,0 +1,89 @@
+{
+    "@context": {
+        "@vocab": "http:\/\/localhost\/api_documentation?_format=jsonld#",
+        "hydra": "http:\/\/www.w3.org\/ns\/hydra\/core#",
+        "globalContext": {
+            "@id": "User\/globalContext",
+            "@type": "globalContext",
+            "isDeletable": true
+        },
+        "email": {
+            "@id": "User\/email",
+            "@type": "email",
+            "isVisible": true,
+            "isEditable": true,
+            "constraints": {
+                "required": true
+            }
+        },
+        "roles": {
+            "@id": "User\/roles",
+            "@type": "choice",
+            "choices": {
+                "role.user": "ROLE_USER",
+                "role.admin": "ROLE_ADMIN",
+                "role.superadmin": "ROLE_SUPER_ADMIN"
+            },
+            "isVisible": true,
+            "isEditable": true,
+            "multiple": true
+        },
+        "password": "User\/password",
+        "plainPassword": {
+            "@id": "User\/plainPassword",
+            "@type": "password",
+            "isVisible": true,
+            "isEditable": true
+        },
+        "civility": {
+            "@id": "User\/civility",
+            "@type": "choice",
+            "choices": {
+                "MR": "enum.civility.mr",
+                "MRS": "enum.civility.mrs",
+                "MS": "enum.civility.ms"
+            },
+            "multiple": false,
+            "isVisible": true,
+            "isEditable": true
+        },
+        "firstName": {
+            "@id": "User\/firstName",
+            "@type": "text",
+            "isVisible": true,
+            "isEditable": false
+        },
+        "lastName": {
+            "@id": "User\/lastName",
+            "@type": "text",
+            "isVisible": true,
+            "isEditable": true
+        },
+        "avatarFileName": {
+            "@id": "User\/avatarFileName",
+            "@type": "image",
+            "isVisible": true,
+            "isEditable": true,
+            "constraints": {
+                "acceptedFormats": [
+                    "image\/jpeg",
+                    "image\/png"
+                ]
+            }
+        },
+        "jobTitle": {
+            "@id": "User\/jobTitle",
+            "@type": "text",
+            "isVisible": true,
+            "isEditable": true
+        },
+        "createdBy": "User\/createdBy",
+        "createdAt": "User\/createdAt",
+        "updatedBy": "User\/updatedBy",
+        "updatedAt": "User\/updatedAt",
+        "deletedAt": "User\/deletedAt",
+        "userIdentifier": "User\/userIdentifier",
+        "username": "User\/username",
+        "deleted": "User\/deleted"
+    }
+}

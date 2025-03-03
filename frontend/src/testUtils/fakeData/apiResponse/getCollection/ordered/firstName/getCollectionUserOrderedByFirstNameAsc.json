@@ -1,0 +1,462 @@
+{
+    "@context": "\/api\/contexts\/User",
+    "@id": "\/api\/users",
+    "@type": "hydra:Collection",
+    "hydra:totalItems": 100,
+    "hydra:member": [
+        {
+            "@id": "\/api\/users\/271",
+            "@type": "User",
+            "id": 271,
+            "email": "hermina.quigley@hotmail.com",
+            "roles": [
+                "ROLE_ADMIN",
+                "ROLE_USER"
+            ],
+            "civility": "",
+            "firstName": "Alessia Turner",
+            "lastName": "Nelle Gerlach",
+            "jobTitle": "IA engineer",
+            "emailSignature": "\u003Cp\u003EConsequatur rerum et minima ut omnis laborum consequuntur. Recusandae perferendis corrupti qui quia pariatur. Et beatae similique neque. Et nisi dolore eos dolor laboriosam.\u003C\/p\u003E\u003Cp\u003EPlaceat assumenda adipisci necessitatibus id et omnis voluptatem harum. Ea totam sed qui dignissimos et. Earum sunt dolores quia quisquam error.\u003C\/p\u003E"
+        },
+        {
+            "@id": "\/api\/users\/301",
+            "@type": "User",
+            "id": 301,
+            "email": "penelope.kilback@schimmel.com",
+            "roles": [
+                "ROLE_ADMIN",
+                "ROLE_USER"
+            ],
+            "civility": "enum.civility.mrs",
+            "firstName": "Alexandro Fadel",
+            "lastName": "Michel Von",
+            "jobTitle": "Developper",
+            "emailSignature": "\u003Cp\u003EOmnis saepe rerum cum iure suscipit ut explicabo doloribus. Et rerum dolores voluptatem enim ab et. Illum repellat suscipit possimus blanditiis autem architecto. Optio voluptas natus repellendus. A excepturi reprehenderit numquam dignissimos ut necessitatibus.\u003C\/p\u003E\u003Cp\u003EUt laudantium praesentium earum est. Aliquid voluptas eum consequatur a. Porro esse est autem.\u003C\/p\u003E"
+        },
+        {
+            "@id": "\/api\/users\/257",
+            "@type": "User",
+            "id": 257,
+            "email": "vonrueden.sonia@yahoo.com",
+            "roles": [
+                "ROLE_ADMIN",
+                "ROLE_USER"
+            ],
+            "civility": "",
+            "firstName": "Ashley Nienow",
+            "lastName": "Edna Reinger",
+            "jobTitle": "IA engineer",
+            "emailSignature": "\u003Cp\u003EExpedita saepe voluptatem aut aut et. Nam voluptates dolore provident autem molestiae. Quas aut nulla consequatur debitis saepe. In et voluptas culpa et consequatur officia sint.\u003C\/p\u003E\u003Cp\u003ETempora sunt minima saepe dolore tempore repellendus et et. Qui est voluptatem consequuntur. In vero nobis eligendi id.\u003C\/p\u003E"
+        },
+        {
+            "@id": "\/api\/users\/295",
+            "@type": "User",
+            "id": 295,
+            "email": "batz.sydney@yahoo.com",
+            "roles": [
+                "ROLE_ADMIN",
+                "ROLE_USER"
+            ],
+            "civility": "",
+            "firstName": "Bernadine Legros",
+            "lastName": "Darwin Lubowitz",
+            "jobTitle": "IA engineer",
+            "emailSignature": "\u003Cp\u003EQuisquam iusto est quas molestiae quaerat est nesciunt. Fuga atque et sapiente commodi.\u003C\/p\u003E\u003Cp\u003ESit quibusdam et eveniet aut velit fugiat et. Rerum sit dignissimos quisquam amet saepe cumque architecto atque. Et quis accusantium sint mollitia.\u003C\/p\u003E"
+        },
+        {
+            "@id": "\/api\/users\/260",
+            "@type": "User",
+            "id": 260,
+            "email": "schimmel.roberta@graham.com",
+            "roles": [
+                "ROLE_USER"
+            ],
+            "civility": "enum.civility.ms",
+            "firstName": "Betsy Prohaska",
+            "lastName": "Brant Tromp",
+            "jobTitle": "IA engineer",
+            "emailSignature": "\u003Cp\u003EBeatae possimus molestiae officia voluptas possimus. Unde eveniet aut molestiae laborum. Esse officiis impedit commodi eligendi ex quod corporis.\u003C\/p\u003E\u003Cp\u003EFugit ipsa officia et ut ipsa exercitationem minus. Quam consequatur autem architecto qui consequatur qui accusamus. Temporibus repudiandae qui iusto quae minus eos sed rerum. Voluptatem sint et suscipit incidunt autem non.\u003C\/p\u003E"
+        },
+        {
+            "@id": "\/api\/users\/289",
+            "@type": "User",
+            "id": 289,
+            "email": "walker.andre@hotmail.com",
+            "roles": [
+                "ROLE_USER"
+            ],
+            "civility": "enum.civility.ms",
+            "firstName": "Brandi Ryan",
+            "lastName": "Gage Nicolas",
+            "jobTitle": "IA engineer",
+            "emailSignature": "\u003Cp\u003EIusto ut a unde tempore voluptatem ab porro. Dolorem qui rerum atque rem nulla consequatur ipsa. Qui nihil est magni enim aspernatur omnis. Corrupti est voluptates tenetur soluta similique optio quas quidem.\u003C\/p\u003E\u003Cp\u003EEos iste unde aliquid eum sed nam deserunt nihil. Libero est qui debitis quia delectus.\u003C\/p\u003E"
+        },
+        {
+            "@id": "\/api\/users\/285",
+            "@type": "User",
+            "id": 285,
+            "email": "schultz.hulda@yahoo.com",
+            "roles": [
+                "ROLE_USER"
+            ],
+            "civility": "",
+            "firstName": "Bret Schinner",
+            "lastName": "Lucas Koelpin",
+            "jobTitle": "IA engineer",
+            "emailSignature": "\u003Cp\u003ERepudiandae dolores aspernatur voluptatem odio. Voluptas et et voluptatem. Blanditiis consequuntur laborum qui error. Quae sit aliquam asperiores ipsa in ut doloremque.\u003C\/p\u003E\u003Cp\u003EAutem repudiandae excepturi tempora aperiam. Aut numquam autem et expedita animi atque similique. Praesentium aspernatur fuga hic ut accusantium perspiciatis. Odit provident aut natus deleniti.\u003C\/p\u003E"
+        },
+        {
+            "@id": "\/api\/users\/221",
+            "@type": "User",
+            "id": 221,
+            "email": "ydickens@hotmail.com",
+            "roles": [
+                "ROLE_ADMIN",
+                "ROLE_USER"
+            ],
+            "civility": "",
+            "firstName": "Carleton Herman",
+            "lastName": "Zita Corwin MD",
+            "jobTitle": "Data scientist",
+            "emailSignature": "\u003Cp\u003EId vitae qui expedita similique laudantium. Nobis dignissimos rerum hic odit. Voluptas deserunt sequi molestiae sit.\u003C\/p\u003E\u003Cp\u003EAccusamus aut mollitia autem ut. Quia sint praesentium pariatur est velit assumenda quo. Sunt facilis officiis nihil quia culpa voluptatem mollitia voluptatum.\u003C\/p\u003E"
+        },
+        {
+            "@id": "\/api\/users\/264",
+            "@type": "User",
+            "id": 264,
+            "email": "taya.fisher@gmail.com",
+            "roles": [
+                "ROLE_ADMIN",
+                "ROLE_USER"
+            ],
+            "civility": "enum.civility.mrs",
+            "firstName": "Carter Miller",
+            "lastName": "Sebastian Russel",
+            "jobTitle": "Data scientist",
+            "emailSignature": "\u003Cp\u003EOdit recusandae quia et possimus commodi deserunt aut. Hic repudiandae sit consectetur sunt omnis deserunt ut temporibus.\u003C\/p\u003E\u003Cp\u003EConsequuntur et aspernatur nihil similique aut eum. Voluptatem dolores beatae qui sunt sed quos. Eos labore consequuntur minima deserunt nulla. Minus eaque distinctio ut ut.\u003C\/p\u003E"
+        },
+        {
+            "@id": "\/api\/users\/270",
+            "@type": "User",
+            "id": 270,
+            "email": "bobbie08@mosciski.com",
+            "roles": [
+                "ROLE_USER"
+            ],
+            "civility": "enum.civility.mrs",
+            "firstName": "Catharine Schaden",
+            "lastName": "Miss Lorine Mayert Jr.",
+            "jobTitle": "IA engineer",
+            "emailSignature": "\u003Cp\u003EAut deleniti nihil voluptates et. Est qui qui adipisci maiores nihil. Velit atque aliquam earum sit occaecati et.\u003C\/p\u003E\u003Cp\u003EOmnis repudiandae voluptatem sunt itaque doloribus blanditiis quis. Corporis voluptatem voluptatum aperiam dolores itaque ut quam. Nam in quos aspernatur aspernatur quaerat eligendi. Quo soluta occaecati doloribus harum.\u003C\/p\u003E"
+        },
+        {
+            "@id": "\/api\/users\/276",
+            "@type": "User",
+            "id": 276,
+            "email": "andreane.kovacek@hotmail.com",
+            "roles": [
+                "ROLE_USER"
+            ],
+            "civility": "enum.civility.mrs",
+            "firstName": "Christelle Rempel",
+            "lastName": "Mable Strosin",
+            "jobTitle": "IA engineer",
+            "emailSignature": "\u003Cp\u003EIllum eos cum rerum est. Provident quibusdam eum aliquam fugit id. Et id sit vitae quis.\u003C\/p\u003E\u003Cp\u003EMagnam quia ut et. Culpa iste tempore aut modi. Ut vitae repellat ut ut animi debitis. Perferendis dolorum aspernatur reiciendis ducimus ipsam et quod. Velit necessitatibus est incidunt exercitationem placeat ut.\u003C\/p\u003E"
+        },
+        {
+            "@id": "\/api\/users\/222",
+            "@type": "User",
+            "id": 222,
+            "email": "misty.buckridge@rice.org",
+            "roles": [
+                "ROLE_ADMIN",
+                "ROLE_USER"
+            ],
+            "civility": "enum.civility.ms",
+            "firstName": "Cletus Botsford",
+            "lastName": "Dr. Emmet Grady Jr.",
+            "jobTitle": "Data scientist",
+            "emailSignature": "\u003Cp\u003EHic dolores aut quos delectus consequatur voluptatum accusamus. At voluptatem quia nobis accusamus ea. Odio facere itaque aut nihil qui dolores earum. Voluptatibus sequi iste beatae temporibus voluptatem nihil animi.\u003C\/p\u003E\u003Cp\u003EVoluptatem sint ratione nihil non. Ea fuga est debitis non. Voluptas atque ullam itaque quia pariatur rerum consequatur. Sunt ut consequatur ut occaecati. Repellat illum voluptatem voluptatem.\u003C\/p\u003E"
+        },
+        {
+            "@id": "\/api\/users\/208",
+            "@type": "User",
+            "id": 208,
+            "email": "altenwerth.ludwig@gusikowski.com",
+            "roles": [
+                "ROLE_USER"
+            ],
+            "civility": "enum.civility.ms",
+            "firstName": "Clint Johns",
+            "lastName": "Dorris Feeney",
+            "jobTitle": "Developper",
+            "emailSignature": "\u003Cp\u003EEt veritatis dolores explicabo nesciunt voluptatem et. Numquam quo ducimus dolorem rerum eveniet. Itaque et non labore at eum non quia.\u003C\/p\u003E\u003Cp\u003EDicta quis rerum praesentium est et et. Sequi natus qui non molestiae consectetur et sed. Esse omnis eveniet voluptatum et consequatur. Et quisquam sunt omnis quos eum eum.\u003C\/p\u003E"
+        },
+        {
+            "@id": "\/api\/users\/218",
+            "@type": "User",
+            "id": 218,
+            "email": "warren.hickle@connelly.com",
+            "roles": [
+                "ROLE_ADMIN",
+                "ROLE_USER"
+            ],
+            "civility": "enum.civility.ms",
+            "firstName": "Constance Turner Sr.",
+            "lastName": "Kaylin Thompson Jr.",
+            "jobTitle": "Data scientist",
+            "emailSignature": "\u003Cp\u003ESit tenetur tempore odit unde qui. Animi optio atque quasi vel non. Quasi neque fugiat dicta ut et sit est placeat.\u003C\/p\u003E\u003Cp\u003EEa aut vel odio vel doloribus cum et. Commodi placeat distinctio id temporibus sit. Facere ea ipsum quos possimus omnis sint. Culpa blanditiis ut ea expedita.\u003C\/p\u003E"
+        },
+        {
+            "@id": "\/api\/users\/297",
+            "@type": "User",
+            "id": 297,
+            "email": "aterry@gmail.com",
+            "roles": [
+                "ROLE_ADMIN",
+                "ROLE_USER"
+            ],
+            "civility": "enum.civility.mrs",
+            "firstName": "Cristopher Stark",
+            "lastName": "Prof. Rhiannon Jaskolski III",
+            "jobTitle": "Data scientist",
+            "emailSignature": "\u003Cp\u003EArchitecto aperiam sapiente voluptatem possimus ut aut. Aliquid repudiandae suscipit reprehenderit molestiae cum ut rerum. Quos ea ipsa et ut.\u003C\/p\u003E\u003Cp\u003EEt et pariatur beatae aut consequuntur ratione aut. Quos molestias repudiandae et. Omnis odit provident esse harum fuga dolorem. Assumenda vero voluptate quos est aut sed sit.\u003C\/p\u003E"
+        },
+        {
+            "@id": "\/api\/users\/282",
+            "@type": "User",
+            "id": 282,
+            "email": "guiseppe.sanford@gmail.com",
+            "roles": [
+                "ROLE_USER"
+            ],
+            "civility": "enum.civility.ms",
+            "firstName": "Darius Lesch V",
+            "lastName": "Camilla Windler",
+            "jobTitle": "Data scientist",
+            "emailSignature": "\u003Cp\u003EAut sequi sed et quia quis. Error provident a sed enim atque blanditiis aut. Corrupti ut enim blanditiis tenetur blanditiis.\u003C\/p\u003E\u003Cp\u003EAb aut pariatur sint quam alias at. Alias totam accusantium consequatur modi illo quia.\u003C\/p\u003E"
+        },
+        {
+            "@id": "\/api\/users\/273",
+            "@type": "User",
+            "id": 273,
+            "email": "ruecker.arthur@hotmail.com",
+            "roles": [
+                "ROLE_USER"
+            ],
+            "civility": "enum.civility.ms",
+            "firstName": "David Mitchell",
+            "lastName": "Austen Hammes",
+            "jobTitle": "Data scientist",
+            "emailSignature": "\u003Cp\u003EVoluptatum nisi labore quo maiores officiis cumque. Sunt sed laboriosam aut. Quod quaerat ducimus doloribus natus quia sapiente. Dolorem nisi beatae consequatur modi adipisci eum qui.\u003C\/p\u003E\u003Cp\u003EPariatur eligendi iure ea minima totam tempore dolor molestiae. Dolor atque qui et commodi consequuntur ab voluptatibus. Voluptas tempora omnis aut et culpa ullam ducimus dolor. Sed est quisquam aperiam autem modi. Sunt repudiandae doloribus non repudiandae veritatis omnis rerum.\u003C\/p\u003E"
+        },
+        {
+            "@id": "\/api\/users\/210",
+            "@type": "User",
+            "id": 210,
+            "email": "bins.beryl@heller.com",
+            "roles": [
+                "ROLE_USER"
+            ],
+            "civility": "",
+            "firstName": "David Wolf",
+            "lastName": "Angie Schamberger",
+            "jobTitle": "IA engineer",
+            "emailSignature": "\u003Cp\u003EAspernatur facilis laboriosam rerum sapiente ut. Et natus minima cum. Nemo distinctio esse provident facilis architecto cupiditate.\u003C\/p\u003E\u003Cp\u003EAutem eveniet nostrum fugit repudiandae. Placeat dicta adipisci voluptatem rerum dolores est est. Quibusdam tenetur beatae sint.\u003C\/p\u003E"
+        },
+        {
+            "@id": "\/api\/users\/225",
+            "@type": "User",
+            "id": 225,
+            "email": "zgoyette@macejkovic.com",
+            "roles": [
+                "ROLE_ADMIN",
+                "ROLE_USER"
+            ],
+            "civility": "enum.civility.mrs",
+            "firstName": "Delia Mertz",
+            "lastName": "Germaine Carroll I",
+            "jobTitle": "Developper",
+            "emailSignature": "\u003Cp\u003EAutem quia ipsa deleniti maiores. Sed earum molestias facilis doloremque. Autem facilis distinctio qui quia non consequatur. Iure quae facilis aut.\u003C\/p\u003E\u003Cp\u003ENulla in voluptatem perspiciatis repellat dolorum. Assumenda soluta placeat delectus tenetur totam velit. Magni odit minima expedita vel quia est. Delectus esse tempore soluta aut aut sed optio.\u003C\/p\u003E"
+        },
+        {
+            "@id": "\/api\/users\/267",
+            "@type": "User",
+            "id": 267,
+            "email": "mia.metz@hotmail.com",
+            "roles": [
+                "ROLE_USER"
+            ],
+            "civility": "enum.civility.ms",
+            "firstName": "Dr. Alyce Batz DVM",
+            "lastName": "Teresa Mitchell",
+            "jobTitle": "IA engineer",
+            "emailSignature": "\u003Cp\u003EEt ea est et. Reprehenderit similique adipisci vel qui vel vero tempore. Incidunt et dolores iure voluptas nam ipsum architecto.\u003C\/p\u003E\u003Cp\u003ENesciunt repellat praesentium dolorum temporibus. Illo facere laborum cumque veniam. Consectetur ut rerum quos harum exercitationem tempora.\u003C\/p\u003E"
+        }
+    ],
+    "hydra:view": {
+        "@id": "\/api\/users?itemsPerPage=20\u0026locale=en\u0026order%5BfirstName%5D=ASC\u0026page=1",
+        "@type": "hydra:PartialCollectionView",
+        "hydra:first": "\/api\/users?itemsPerPage=20\u0026locale=en\u0026order%5BfirstName%5D=ASC\u0026page=1",
+        "hydra:last": "\/api\/users?itemsPerPage=20\u0026locale=en\u0026order%5BfirstName%5D=ASC\u0026page=5",
+        "hydra:next": "\/api\/users?itemsPerPage=20\u0026locale=en\u0026order%5BfirstName%5D=ASC\u0026page=2"
+    },
+    "hydra:search": {
+        "@type": "hydra:IriTemplate",
+        "hydra:template": "\/api\/users{?id,id[],email,roles,firstName,lastName,jobTitle,order[id],order[email],order[roles],order[password],order[civility],order[firstName],order[lastName],order[avatarFileName],order[jobTitle],order[emailSignature],order[createdAt],order[updatedAt],order[deletedAt],id[between],id[gt],id[gte],id[lt],id[lte]}",
+        "hydra:variableRepresentation": "BasicRepresentation",
+        "hydra:mapping": [
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "id",
+                "property": "id",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "id[]",
+                "property": "id",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "email",
+                "property": "email",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "roles",
+                "property": "roles",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "firstName",
+                "property": "firstName",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "lastName",
+                "property": "lastName",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "jobTitle",
+                "property": "jobTitle",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "order[id]",
+                "property": "id",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "order[email]",
+                "property": "email",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "order[roles]",
+                "property": "roles",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "order[password]",
+                "property": "password",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "order[civility]",
+                "property": "civility",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "order[firstName]",
+                "property": "firstName",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "order[lastName]",
+                "property": "lastName",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "order[avatarFileName]",
+                "property": "avatarFileName",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "order[jobTitle]",
+                "property": "jobTitle",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "order[emailSignature]",
+                "property": "emailSignature",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "order[createdAt]",
+                "property": "createdAt",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "order[updatedAt]",
+                "property": "updatedAt",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "order[deletedAt]",
+                "property": "deletedAt",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "id[between]",
+                "property": "id",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "id[gt]",
+                "property": "id",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "id[gte]",
+                "property": "id",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "id[lt]",
+                "property": "id",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "id[lte]",
+                "property": "id",
+                "required": false
+            }
+        ]
+    }
+}

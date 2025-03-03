@@ -1,0 +1,31 @@
+// app theme colors
+
+$primary: #7c2991;
+$primary-flash: #c600f8;
+
+$secondary: $gray-600;
+$brand: #ffed48;
+$brand-dark: #dbcc44;
+// $success: $green;
+// $info: $blue;
+// $warning: $yellow;
+// $danger: $red;
+// $light: $gray-100;
+// $dark: $gray-800;
+
+
+.bg-brand {
+    background-color: $brand;
+}
+.text-brand {
+    color: $brand;
+}
+
+.btn-brand {
+    background-color: $brand;
+    border: solid 2px $dark;
+}
+.btn-brand:hover {
+    background-color: $brand;
+    border: solid 2px $dark;
+}

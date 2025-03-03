@@ -1,0 +1,245 @@
+{
+    "@context": "\/api\/contexts\/User",
+    "@id": "\/api\/users",
+    "@type": "hydra:Collection",
+    "hydra:totalItems": 100,
+    "hydra:member": [
+        {
+            "@id": "\/api\/users\/202",
+            "@type": "User",
+            "id": 202,
+            "email": "test@email.fr",
+            "roles": [
+                "ROLE_SUPER_ADMIN",
+                "ROLE_USER"
+            ],
+            "civility": "enum.civility.mrs",
+            "firstName": "Virgie VonRueden",
+            "lastName": "Maximilian Blick Jr.",
+            "jobTitle": "Developper",
+            "emailSignature": "\u003Cp\u003EDistinctio totam et eos libero corporis officiis vitae. Molestiae inventore dolorem non sint ea. Tempora deserunt tempora laboriosam in numquam quo. Totam illo et et asperiores necessitatibus.\u003C\/p\u003E\u003Cp\u003EQuia ipsam sunt minima dolorem aut. Recusandae non beatae ullam iusto facere. Quibusdam quia cupiditate rerum officiis voluptatem corporis. Exercitationem quia distinctio dignissimos architecto eum.\u003C\/p\u003E"
+        },
+        {
+            "@id": "\/api\/users\/203",
+            "@type": "User",
+            "id": 203,
+            "email": "phessel@thiel.com",
+            "roles": [
+                "ROLE_ADMIN",
+                "ROLE_USER"
+            ],
+            "civility": "enum.civility.mrs",
+            "firstName": "Dr. Jamaal Christiansen",
+            "lastName": "Clay Steuber",
+            "jobTitle": "IA engineer",
+            "emailSignature": "\u003Cp\u003EQuia quam quia dolor consequatur excepturi neque. Exercitationem repudiandae et quibusdam provident quas. Consequatur unde impedit nulla explicabo quasi doloremque iusto consequatur. Quia doloribus aperiam et quas ipsa nesciunt.\u003C\/p\u003E\u003Cp\u003ENam voluptatum neque voluptatum veniam id accusamus animi repudiandae. Qui culpa quam neque qui odit. Rerum quasi ut voluptatem quis dicta.\u003C\/p\u003E"
+        },
+        {
+            "@id": "\/api\/users\/204",
+            "@type": "User",
+            "id": 204,
+            "email": "demarcus23@okeefe.info",
+            "roles": [
+                "ROLE_USER"
+            ],
+            "civility": "enum.civility.mrs",
+            "firstName": "Mr. Henry Fay V",
+            "lastName": "Dr. Gonzalo Haag Jr.",
+            "jobTitle": "Developper",
+            "emailSignature": "\u003Cp\u003EQui et ea nulla facere harum amet distinctio. Est mollitia beatae rerum aut reprehenderit inventore. Iusto cumque quia aut sit.\u003C\/p\u003E\u003Cp\u003ENostrum enim aliquid tenetur consectetur sed nesciunt. Praesentium dolores explicabo et quas corporis.\u003C\/p\u003E"
+        },
+        {
+            "@id": "\/api\/users\/205",
+            "@type": "User",
+            "id": 205,
+            "email": "thand@yahoo.com",
+            "roles": [
+                "ROLE_ADMIN",
+                "ROLE_USER"
+            ],
+            "civility": "enum.civility.ms",
+            "firstName": "Kellie Schmitt Sr.",
+            "lastName": "Ivah Grimes",
+            "jobTitle": "Developper",
+            "emailSignature": "\u003Cp\u003EQuos libero sed qui quasi omnis numquam deleniti cumque. Consequatur iste deserunt aut ut.\u003C\/p\u003E\u003Cp\u003EFugit natus et id molestias. Voluptatem modi saepe voluptate facilis. Maxime voluptatem labore accusantium minus minus molestiae et.\u003C\/p\u003E"
+        },
+        {
+            "@id": "\/api\/users\/206",
+            "@type": "User",
+            "id": 206,
+            "email": "isabella75@hotmail.com",
+            "roles": [
+                "ROLE_USER"
+            ],
+            "civility": "enum.civility.mrs",
+            "firstName": "Kiel Davis Sr.",
+            "lastName": "Brain Considine DDS",
+            "jobTitle": "Developper",
+            "emailSignature": "\u003Cp\u003EEx laboriosam excepturi natus nihil omnis harum asperiores. Incidunt suscipit aut et blanditiis et voluptatibus rerum. Dolores a officiis consequatur animi atque. Qui omnis non labore non.\u003C\/p\u003E\u003Cp\u003EQuas veniam vitae qui rerum est voluptatibus quia. Aliquam qui illum maiores numquam.\u003C\/p\u003E"
+        }
+    ],
+    "hydra:view": {
+        "@id": "\/api\/users?itemsPerPage=5\u0026locale=fr\u0026q=\u0026page=1",
+        "@type": "hydra:PartialCollectionView",
+        "hydra:first": "\/api\/users?itemsPerPage=5\u0026locale=fr\u0026q=\u0026page=1",
+        "hydra:last": "\/api\/users?itemsPerPage=5\u0026locale=fr\u0026q=\u0026page=20",
+        "hydra:next": "\/api\/users?itemsPerPage=5\u0026locale=fr\u0026q=\u0026page=2"
+    },
+    "hydra:search": {
+        "@type": "hydra:IriTemplate",
+        "hydra:template": "\/api\/users{?id,id[],email,roles,firstName,lastName,jobTitle,order[id],order[email],order[roles],order[password],order[civility],order[firstName],order[lastName],order[avatarFileName],order[jobTitle],order[emailSignature],order[createdAt],order[updatedAt],order[deletedAt],id[between],id[gt],id[gte],id[lt],id[lte]}",
+        "hydra:variableRepresentation": "BasicRepresentation",
+        "hydra:mapping": [
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "id",
+                "property": "id",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "id[]",
+                "property": "id",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "email",
+                "property": "email",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "roles",
+                "property": "roles",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "firstName",
+                "property": "firstName",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "lastName",
+                "property": "lastName",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "jobTitle",
+                "property": "jobTitle",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "order[id]",
+                "property": "id",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "order[email]",
+                "property": "email",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "order[roles]",
+                "property": "roles",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "order[password]",
+                "property": "password",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "order[civility]",
+                "property": "civility",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "order[firstName]",
+                "property": "firstName",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "order[lastName]",
+                "property": "lastName",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "order[avatarFileName]",
+                "property": "avatarFileName",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "order[jobTitle]",
+                "property": "jobTitle",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "order[emailSignature]",
+                "property": "emailSignature",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "order[createdAt]",
+                "property": "createdAt",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "order[updatedAt]",
+                "property": "updatedAt",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "order[deletedAt]",
+                "property": "deletedAt",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "id[between]",
+                "property": "id",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "id[gt]",
+                "property": "id",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "id[gte]",
+                "property": "id",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "id[lt]",
+                "property": "id",
+                "required": false
+            },
+            {
+                "@type": "IriTemplateMapping",
+                "variable": "id[lte]",
+                "property": "id",
+                "required": false
+            }
+        ]
+    }
+}
