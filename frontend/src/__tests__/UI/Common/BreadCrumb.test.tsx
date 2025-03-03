@@ -26,14 +26,14 @@ describe('BreadCrumb', () => {
         setUp('title', [
             { link: '/link', label: 'label' }
         ]);
-        expect(screen.getByText('Label')).toHaveAttribute('href', '/link');
+        expect(screen.getByText('label')).toHaveAttribute('href', '/link');
     })
 
     it('should render correctly breadcrumb item link when route is passed', () => {
         setUp('title', [
             { route: 'home', label: 'label' }
         ]);
-        expect(screen.getByText('Label')).toHaveAttribute('href', '/');
+        expect(screen.getByText('label')).toHaveAttribute('href', '/');
     })
 
     it('should render correctly when hasHomeItem is false', () => {
@@ -110,7 +110,7 @@ describe('BreadCrumb', () => {
               <a
                 href="/"
               >
-                Tableau de bord
+                dashboard
               </a>
             </li>
             <li
@@ -119,7 +119,7 @@ describe('BreadCrumb', () => {
               <a
                 href="/link"
               >
-                Label
+                label
               </a>
             </li>
             <li

@@ -143,12 +143,12 @@ input#status {
     background: $gray-200;
 }
 .auth-page-wrapper .auth-one-bg{
-    background-image: url("../../../../images/custom/banner/france-sport-banner.jpg");
+    background-image: url("../../../../images/custom/banner/auth-banner.jpg");
     background-position: center top;
     background-size: cover;
 
     .bg-overlay{
-        background: linear-gradient(to right, darken($primary, 40%), darken($primary, 10%));
+        background: linear-gradient(to right, darken($dark, 80%), darken($dark, 80%));
         opacity: .7;
     }
 }

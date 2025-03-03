@@ -72,25 +72,20 @@ describe('Login', () => {
                   class="auth-logo"
                 >
                   <div
-                    style="margin: 30px;"
+                    style="margin: 20px;"
                   >
                     <img
-                      alt="Logo"
+                      alt="logo"
                       height="50"
-                      src="france-sport-logo.png"
+                      src="main-logo.png"
                     />
-                    <div
-                      class="company-choice-item-title"
-                    >
-                      France Sport
-                    </div>
                   </div>
                 </div>
               </div>
               <p
                 class="mt-3 fs-15 fw-medium"
               >
-                France Sport
+                Cocktailissimo
                  back-office
               </p>
             </div>
@@ -114,12 +109,12 @@ describe('Login', () => {
                   <h5
                     class="text-primary"
                   >
-                    Bienvenue !
+                    welcome_back
                   </h5>
                   <p
                     class="text-muted"
                   >
-                    Connectez-vous pour continuer
+                    login_to_continue
                   </p>
                 </div>
                 <div
@@ -136,15 +131,15 @@ describe('Login', () => {
                       >
                         <label
                           class="form-label form-label"
-                          for="username"
+                          for="email"
                         >
-                          Email
+                          email
                         </label>
                         <input
                           aria-invalid="false"
                           class="form-control form-control"
-                          name="username"
-                          placeholder="Entrer votre adresse email"
+                          name="email"
+                          placeholder="enter_email"
                           type="email"
                           value=""
                         />
@@ -160,7 +155,7 @@ describe('Login', () => {
                           class="text-muted"
                           href="/auth/forgotten-password"
                         >
-                          Mot de passe oublié ?
+                          forgot_password
                         </a>
                       </div>
                       <div
@@ -170,7 +165,7 @@ describe('Login', () => {
                           class="form-label form-label"
                           for="password"
                         >
-                          Mot de passe
+                          password
                         </label>
                         <div
                           class="position-relative auth-pass-inputgroup mb-3"
@@ -182,7 +177,7 @@ describe('Login', () => {
                               aria-invalid="false"
                               class="form-control form-control pe-5 form-control"
                               name="password"
-                              placeholder="Entrer votre mot de passe"
+                              placeholder="enter_password"
                               type="password"
                               value=""
                             />
@@ -207,7 +202,7 @@ describe('Login', () => {
                         type="submit"
                       >
                         <span>
-                          Se connecter
+                          login
                         </span>
                       </button>
                     </div>
@@ -240,7 +235,7 @@ describe('Login', () => {
                 © 
                 2025
                  
-                France Sport
+                Cocktailissimo
               </p>
             </div>
           </div>
@@ -250,6 +245,11 @@ describe('Login', () => {
   </div>
 </div>
 `
+
+
+
+
+
 
 );
     })

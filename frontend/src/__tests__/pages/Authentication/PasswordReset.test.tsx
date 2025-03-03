@@ -76,25 +76,20 @@ describe('PasswordReset', () => {
                   class="auth-logo"
                 >
                   <div
-                    style="margin: 30px;"
+                    style="margin: 20px;"
                   >
                     <img
                       alt="Logo"
                       height="50"
-                      src="france-sport-logo.png"
+                      src="main-logo.png"
                     />
-                    <div
-                      class="company-choice-item-title"
-                    >
-                      France Sport
-                    </div>
                   </div>
                 </div>
               </div>
               <p
                 class="mt-3 fs-15 fw-medium"
               >
-                France Sport
+                Cocktailissimo
                  back-office
               </p>
             </div>
@@ -272,7 +267,7 @@ describe('PasswordReset', () => {
                 © 
                 2025
                  
-                France Sport
+                Cocktailissimo
               </p>
             </div>
           </div>
@@ -282,6 +277,11 @@ describe('PasswordReset', () => {
   </div>
 </div>
 `
+
+
+
+
+
 
 
 

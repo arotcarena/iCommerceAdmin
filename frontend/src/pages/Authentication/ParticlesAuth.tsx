@@ -28,11 +28,8 @@ export const ParticlesAuth = ({ children }: any) => {
                                 <div className="text-center mb-4 text-white-50">
                                     <div className="auth-logo-wrapper">
                                         <div className="auth-logo">
-                                            <div style={{margin: '30px'}}>
+                                            <div style={{margin: '20px'}}>
                                                 <img src={logo} alt={t('logo')} height={50} />
-                                                <div className="company-choice-item-title">
-                                                    {AppConfig.COMPANY_NAME}
-                                                </div>
                                             </div>
                                         </div>
                                     </div>

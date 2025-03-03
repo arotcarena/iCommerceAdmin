@@ -63,7 +63,7 @@ describe('Error', () => {
             </div>
             <div>
               <h4>
-                Erreur interne du serveur !
+                internal_server_error
               </h4>
               <p
                 class="text-muted w-75 mx-auto"

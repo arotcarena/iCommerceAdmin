@@ -15,14 +15,14 @@ describe('PasswordRememberedLink', () => {
   <p
     class="mb-0"
   >
-    Attendez, je me souviens de mon mot de passe...
+    wait_remember_my_password
      
     <a
       class="fw-semibold text-primary text-decoration-underline"
       href="/login"
     >
        
-      Cliquez ici
+      click_here
        
     </a>
   </p>

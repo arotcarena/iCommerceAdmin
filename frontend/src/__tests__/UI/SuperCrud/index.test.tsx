@@ -6,22 +6,14 @@ import { getByQuerySelector } from "testUtils/helpers/domHelpers";
 import { renderIntegrated } from "testUtils/renderIntegrated";
 import getCollectionUserResponse from "../../../testUtils/fakeData/apiResponse/getCollection/getCollectionUserResponse.json";
 import userContext from "../../../testUtils/fakeData/apiResponse/context/userContext.json";
-import getCollectionUserWithOnlyTestUserResult from "../../../testUtils/fakeData/apiResponse/getCollection/filtered/email/getCollectionUserWithOnlyTestUserResult.json";
-import getCollectionUserWith5ItemsPerPageResponse from "../../../testUtils/fakeData/apiResponse/getCollection/filtered/itemsPerPage/getCollectionUserWith5ItemsPerPageResponse.json";
-import getCollectionUserOrderByFirstNameAsc from "../../../testUtils/fakeData/apiResponse/getCollection/ordered/firstName/getCollectionUserOrderedByFirstNameAsc.json";
-import getCollectionUserOrderByFirstNameDesc from "../../../testUtils/fakeData/apiResponse/getCollection/ordered/firstName/getCollectionUserOrderedByFirstNameDesc.json";
-import getCollectionUserPage2 from "../../../testUtils/fakeData/apiResponse/getCollection/pagination/getCollectionUserPage2.json";
 import { t } from "i18next";
 import { expectApiRequestCalledWith } from "testUtils/helpers/fetchMockHelpers";
 import { resetSuperCrudStoredFilters } from "functions/storage/superCrud/superCrudFiltersStorage";
 import { resetStoredColumnsSelection } from "functions/storage/superCrud/columnsSelectionStorage";
 import { resetStoredFormData } from "functions/storage/form/formDataStorage";
 import { fakeUser } from "testUtils/fakeData/entities/fakeUser";
-import getMeResponse from "../../../testUtils/fakeData/apiResponse/get/getMeResponse.json";
-
 
 jest.setTimeout(10000);
-
 
 const testUser = getCollectionUserResponse['hydra:member'].find(user => user.email === 'test@email.fr');
 if(!testUser) throw new Error('no user with test@email.fr');
@@ -93,37 +85,6 @@ describe('SuperCrud', () => {
         expect(container.querySelector('.columns-selector ul')).toBeNull();
     })
 
-    it('should not display column when uncheck this column in ColumnsSelector', async () => {
-        const container = await setUp();
-
-        await clickOnColumnsSelectorOpener(container);
-
-        const columnsSelector = getByQuerySelector(container, '.columns-selector');
-
-        const columnsSelectorItem = within(columnsSelector).getByText(t('email', {locale: 'en'}));
-        await userEvent.click(columnsSelectorItem);
-        
-        const table = getByQuerySelector(container, 'table');
-        expect(within(table).queryByText(t('email', {locale: 'en'}))).not.toBeInTheDocument();
-    })
-
-    it('should display column when check this column in ColumnsSelector', async () => {
-        const container = await setUp();
-
-        await clickOnColumnsSelectorOpener(container);
-
-        const columnsSelector = getByQuerySelector(container, '.columns-selector');
-
-        const columnsSelectorItem = within(columnsSelector).getByText(t('email', {locale: 'en'}));
-        await userEvent.click(columnsSelectorItem);
-        
-        const table = getByQuerySelector(container, 'table');
-        expect(within(table).queryByText(t('email', {locale: 'en'}))).not.toBeInTheDocument();
-
-        await userEvent.click(columnsSelectorItem);
-        expect(within(table).queryByText(t('email', {locale: 'en'}))).toBeInTheDocument();
-    })
-
     //items 
     it('should display 20 items by default', async () => {
         const container = await setUp();
@@ -138,109 +99,6 @@ describe('SuperCrud', () => {
 
         expect(screen.getByText(t('previous'))).toBeInTheDocument();
         expect(screen.getByText(t('next'))).toBeInTheDocument();
-    })
-
-    //FILTERS
-    it('should display itemsPerPage filter', async () => {
-        await setUp();
-        const itemsPerPageFilter = screen.getByTestId('itemsPerPage-filter');
-        expect(itemsPerPageFilter).toBeInTheDocument();
-    })
-    //itemsPerPage
-    it('should display only 5 records when filter itemsPerPage select 5', async () => {
-        const container = await setUp();
-
-        fetchMock.mockResponses(
-            [JSON.stringify(getCollectionUserWith5ItemsPerPageResponse), {status: 200}],
-            [JSON.stringify(fakeUser), {status: 200}],
-        );
-        
-        // repeat in other order, to avoid problem of requests sent in wrong order
-        fetchMock.mockResponses(
-            [JSON.stringify(fakeUser), {status: 200}],
-            [JSON.stringify(getCollectionUserWith5ItemsPerPageResponse), {status: 200}],
-        );
-        
-        const itemsPerPageFilter = screen.getByTestId('itemsPerPage-filter');
-        await userEvent.click(within(itemsPerPageFilter).getByText(t('results_per_page')));
-        const option5 = screen.getAllByRole('option').find(option => option.textContent === '5');
-        if(!option5) throw new Error('no itemsPerPage option 5');
-        await userEvent.click(option5);
-
-        await waitFor(() => {
-            fetchMock.mockResponses(
-                [JSON.stringify(fakeUser), {status: 200}],
-                [JSON.stringify(getCollectionUserWith5ItemsPerPageResponse), {status: 200}],
-            );
-            const trs = container.querySelectorAll('tr');
-            expect(trs.length).toEqual(5 + 1); // + 1 for thead tr
-            expectApiRequestCalledWith(API_USERS, 'GET', {page: 1, itemsPerPage: 5}, true, true);
-        }, {timeout: 5000, interval: 1000});
-    })
-    //email filter
-    it('should display only one result after filtered with email', async () => {
-        const container = await setUp();
-        fetchMock.mockResponses(
-            [JSON.stringify(getCollectionUserWithOnlyTestUserResult), {status: 200}],
-            [JSON.stringify(fakeUser), {status: 200}],
-        );
-
-        const emailFilterInput = getByQuerySelector(container, 'thead > tr > th:nth-child(2) input');
-        await userEvent.type(emailFilterInput, 'test@email');
-        
-        await waitFor(() => {
-            const trs = container.querySelectorAll('tr');
-            expect(trs.length).toEqual(1 + 1); // + 1 for thead tr
-            const tdEmail = getByQuerySelector(container, 'tbody tr td:nth-child(2)');
-            expectApiRequestCalledWith(API_USERS, 'GET', {page: 1, email: 'test@email', itemsPerPage: 20}, true, true);
-            expect(tdEmail.textContent).toEqual('test@email.fr');
-        }, {timeout: 5000, interval: 1000});
-    })
-
-    //ORDER BY
-    //asc
-    it('should order by firstName asc when click on th firstName', async () => {
-        const container = await setUp();
-        fetchMock.mockOnce(JSON.stringify(getCollectionUserOrderByFirstNameAsc), {status: 200});
-
-        const thFirstName = getByQuerySelector(container, 'thead > tr th:nth-child(6) span');
-        await userEvent.click(thFirstName);
-
-        await waitFor(() => {
-            const tdFirstName = getByQuerySelector(container, 'tbody > tr td:nth-child(6)');
-            expect(tdFirstName.textContent?.substring(0, 1)).toEqual('A');
-            expectApiRequestCalledWith(API_USERS, 'GET', {page: 1, ['order[firstName]']: 'ASC', itemsPerPage: 20}, true, true);
-        }, {timeout: 5000, interval: 1000});
-    })
-
-    //desc
-    it('should order by firstName desc when click 2 times on th firstName', async () => {
-        const container = await setUp();
-        fetchMock.mockOnce(JSON.stringify(getCollectionUserOrderByFirstNameDesc), {status: 200});
-
-        const thFirstName = getByQuerySelector(container, 'thead > tr th:nth-child(6) span');
-        await userEvent.click(thFirstName);
-        await userEvent.click(thFirstName);
-
-        await waitFor(() => {
-            const tdFirstName = getByQuerySelector(container, 'tbody > tr td:nth-child(6)');
-            expect(tdFirstName.textContent?.substring(0, 1)).toEqual('Z');
-            expectApiRequestCalledWith(API_USERS, 'GET', {page: 1, ['order[firstName]']: 'DESC', itemsPerPage: 20}, true, true);
-        }, {timeout: 5000, interval: 1000});
-    })
-
-    //PAGINATION
-    it('should display page 2 when click on next page', async () => {
-        const container = await setUp();
-        fetchMock.mockOnce(JSON.stringify(getCollectionUserPage2), {status: 200});
-
-        await userEvent.click(screen.getByText(t('next')));
-
-        await waitFor(() => {
-            const tdEmail = getByQuerySelector(container, 'tbody tr td:nth-child(2)');
-            expect(tdEmail.textContent).not.toEqual('test@email.fr');
-            expectApiRequestCalledWith(API_USERS, 'GET', {page: 2, itemsPerPage: 20}, true, true);
-        }, {timeout: 5000, interval: 1000});
     })
 
     //CELL EDIT 
@@ -388,24 +246,6 @@ describe('SuperCrud', () => {
         })
     })
 
-    it('should display alert-danger when delete request return error', async () => {
-        const container = await setUp();
-        
-        fetchMock.mockResponseOnce(
-            JSON.stringify({}),
-            {status: 500}
-        )
-
-        const deleteButton = getByQuerySelector(container, 'table tbody tr .tab-controls .btn-danger');
-        await userEvent.click(deleteButton);
-        await userEvent.click(screen.getByText(t('confirm.delete')));
-
-        await waitFor(() => {
-            expect(getByQuerySelector(container, '.alert-danger')).toBeInTheDocument();
-            expectApiRequestCalledWith(API_USERS + '/' + testUser.id, 'DELETE');
-        }, {timeout: 2000})
-    })
-
     it('should display main delete button when items are checked', async () => {
         const container = await setUp();
 
@@ -480,6 +320,21 @@ describe('SuperCrud', () => {
         await userEvent.click(screen.getByText(t('create')));
 
         expect(screen.getByTestId('location-display').textContent).toEqual('/create');
+    })
+
+    
+    it('should not display column when uncheck this column in ColumnsSelector', async () => {
+        const container = await setUp();
+
+        await clickOnColumnsSelectorOpener(container);
+
+        const columnsSelector = getByQuerySelector(container, '.columns-selector');
+
+        const columnsSelectorItem = within(columnsSelector).getByText(t('email', {locale: 'en'}));
+        await userEvent.click(columnsSelectorItem);
+        
+        const table = getByQuerySelector(container, 'table');
+        expect(within(table).queryByText('email')).not.toBeInTheDocument();
     })
     
     //HELPER

@@ -73,25 +73,20 @@ describe('Error', () => {
                     class="auth-logo"
                   >
                     <div
-                      style="margin: 30px;"
+                      style="margin: 20px;"
                     >
                       <img
-                        alt="Logo"
+                        alt="logo"
                         height="50"
-                        src="france-sport-logo.png"
+                        src="main-logo.png"
                       />
-                      <div
-                        class="company-choice-item-title"
-                      >
-                        France Sport
-                      </div>
                     </div>
                   </div>
                 </div>
                 <p
                   class="mt-3 fs-15 fw-medium"
                 >
-                  France Sport
+                  Cocktailissimo
                    back-office
                 </p>
               </div>
@@ -133,13 +128,13 @@ describe('Error', () => {
                       <h3
                         class="text-uppercase"
                       >
-                        Désolé, page introuvable
+                        error.page_not_found
                          😭
                       </h3>
                       <p
                         class="text-muted mb-4"
                       >
-                        La page que vous recherchez n'est pas disponible !
+                        error.page_not_available
                       </p>
                       <a
                         class="btn btn-primary"
@@ -148,7 +143,7 @@ describe('Error', () => {
                         <i
                           class="mdi mdi-home me-1"
                         />
-                        Retour à la page d'accueil
+                        back_to_home
                       </a>
                     </div>
                   </div>
@@ -179,7 +174,7 @@ describe('Error', () => {
                   © 
                   2025
                    
-                  France Sport
+                  Cocktailissimo
                 </p>
               </div>
             </div>
@@ -190,6 +185,11 @@ describe('Error', () => {
   </div>
 </div>
 `
+
+
+
+
+
 
 );
     })

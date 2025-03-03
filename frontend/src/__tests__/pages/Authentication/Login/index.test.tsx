@@ -11,7 +11,7 @@ import { renderIntegrated } from "testUtils/renderIntegrated"
 describe('Login', () => {
     const setUp = async (): Promise<{
         container: HTMLElement,
-        usernameInput: Element|null,
+        emailInput: Element|null,
         passwordInput: Element|null,
         tryLogin: (username: string|null, password?: string) => Promise<void>
     }> => {
@@ -21,14 +21,14 @@ describe('Login', () => {
             [generateUrl('login')]
         );
 
-        const usernameInput = container.querySelector('form input[name=username]');
+        const emailInput = container.querySelector('form input[name=email]');
         const passwordInput = container.querySelector('form input[name=password]');
         const submitButton = container.querySelector('form button[type=submit]');
 
-        const tryLogin = async (username: string|null = null, password?: string): Promise<void> => {
-            if(usernameInput && passwordInput && submitButton) {
-                if(username) {
-                    await userEvent.type(usernameInput, username);
+        const tryLogin = async (email: string|null = null, password?: string): Promise<void> => {
+            if(emailInput && passwordInput && submitButton) {
+                if(email) {
+                    await userEvent.type(emailInput, email);
                 }
                 if(password) {
                     await userEvent.type(passwordInput, password);
@@ -40,15 +40,15 @@ describe('Login', () => {
         } 
         return {
             container,
-            usernameInput,
+            emailInput,
             passwordInput,
             tryLogin
         };
     }
 
     it('should render form', async () => {
-        const {usernameInput, passwordInput} = await setUp();
-        expect(usernameInput).toBeInTheDocument();
+        const {emailInput, passwordInput} = await setUp();
+        expect(emailInput).toBeInTheDocument();
         expect(passwordInput).toBeInTheDocument();
     })
 
@@ -79,7 +79,7 @@ describe('Login', () => {
         await tryLogin('test@email.fr', 'wrong_password');
 
         expectCustomFetchCalledWith(AppConfig.API_BASE_URL + API_LOGIN, 'POST', {
-            username: 'test@email.fr',
+            email: 'test@email.fr',
             password: 'wrong_password'
         });
 
@@ -101,7 +101,7 @@ describe('Login', () => {
         await tryLogin('test@email.fr', 'password');
         
         expectCustomFetchCalledWith(AppConfig.API_BASE_URL + API_LOGIN, 'POST', {
-            username: 'test@email.fr',
+            email: 'test@email.fr',
             password: 'password'
         });
 
@@ -120,7 +120,7 @@ describe('Login', () => {
         await tryLogin('test@email.fr', 'password');
         
         expectCustomFetchCalledWith(AppConfig.API_BASE_URL + API_LOGIN, 'POST', {
-            username: 'test@email.fr',
+            email: 'test@email.fr',
             password: 'password'
         });
 

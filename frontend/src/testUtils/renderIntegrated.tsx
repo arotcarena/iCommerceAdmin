@@ -33,7 +33,9 @@ export const LocationDisplay = () => {
 
 export const LanguageConfig = ({lang}: {lang?: string}) => {
   const {i18n} = useTranslation();
-  i18n.changeLanguage(lang || 'en');
+  if(i18n.changeLanguage) {
+    i18n.changeLanguage(lang || 'en');
+  }
   return '';
 };
 

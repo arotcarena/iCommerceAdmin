@@ -14,7 +14,7 @@ export class AppConfig {
     static DEFAULT_LOCALE: string = 'fr';
 
     //brand
-    static COMPANY_NAME: string = 'Cocktailissimo';
+    static COMPANY_NAME: string = process.env.REACT_APP_COMPANY_NAME ?? 'Cocktailissimo';
     static COMPANY_SUBTITLE: string = 'Art of Mixing';
 
     //title 
